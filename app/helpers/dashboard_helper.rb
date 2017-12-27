@@ -1,3 +1,3 @@
 # home page helper
-module HomePageHelper
+module DashboardHelper
 end
