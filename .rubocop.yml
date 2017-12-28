@@ -3,3 +3,9 @@ inherit_from: .rubocop_todo.yml
 AllCops:
   Exclude:
     - 'spec/spec_helper.rb'
+    - 'db/**/*'
+    - 'config/initializers/*'
+
+
+Style/Documentation:
+  Enabled: false
