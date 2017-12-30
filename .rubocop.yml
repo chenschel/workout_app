@@ -5,6 +5,7 @@ AllCops:
     - 'spec/spec_helper.rb'
     - 'db/**/*'
     - 'config/initializers/*'
+    - 'Guardfile'
 
 
 Style/Documentation:
