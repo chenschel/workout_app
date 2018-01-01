@@ -10,3 +10,11 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'spec/rails_helper.rb'
+    - 'bin/*'
