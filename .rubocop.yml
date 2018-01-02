@@ -18,3 +18,7 @@ Style/MixinUsage:
   Exclude:
     - 'spec/rails_helper.rb'
     - 'bin/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
