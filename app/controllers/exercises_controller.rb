@@ -2,6 +2,7 @@ class ExercisesController < ApplicationController
   before_action :authenticate_user!
   before_action :exercise, except: [:new, :create, :index]
   def index
+    @exercises = current_user.exercises.all
   end
 
   def new
