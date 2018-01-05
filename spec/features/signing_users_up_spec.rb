@@ -5,6 +5,8 @@ RSpec.feature 'Sign-up an user' do
     visit '/'
 
     click_link('Sign up')
+    fill_in('First name', with: 'John')
+    fill_in('Last name', with: 'Doe')
     fill_in('Email', with: 'john@example.com')
     fill_in('Password', with: 'password')
     fill_in('Password confirmation', with: 'password')
@@ -12,5 +14,9 @@ RSpec.feature 'Sign-up an user' do
 
     expect(page).to have_content('You have signed up successfully.')
     expect(current_path).to eq(root_path)
+
+    logout # signed in users were rejected from members (athletes) array
+    visit('/')
+    expect(page).to have_content('John Doe')
   end
 end
