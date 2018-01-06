@@ -23,6 +23,12 @@
             <li class="nav-item"><%= link_to('Sign out', destroy_user_session_path, { method: :delete, class: 'nav-link' }) %></li>
           <% end %>
         </ul>
+        <%= form_tag(search_dashboard_path, class: 'navbar-form navbar-left', role: 'search') do %>
+          <div class="form-group">
+          <%= text_field_tag(:search_name, nil, placeholder: 'Search for friend', class: 'form-control') %>
+          </div>
+          <%= submit_tag('Search', class: 'btn btn-default') %>
+        <% end %>
         <div class="navbar-right">
           <span class="navbar-text"><%= "You are signed in as: #{current_user.email}" if user_signed_in? %></span>
         </div>
