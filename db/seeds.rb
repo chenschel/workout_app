@@ -88,3 +88,13 @@ users = User.create!(
     },
   ]
 )
+
+users.each do |user|
+  (3..rand(5..9)).each do |number|
+    user.exercises.create(
+      workout: "Workout #{number}",
+      duration_in_min: rand(25..120),
+      workout_date: rand(2..10).days.from_now
+    )
+  end
+end
