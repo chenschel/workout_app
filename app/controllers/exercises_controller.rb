@@ -3,6 +3,7 @@ class ExercisesController < ApplicationController
   before_action :exercise, except: [:new, :create, :index]
   def index
     @exercises = current_user.exercises.all
+    @friends = current_user.friends
   end
 
   def new
