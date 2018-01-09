@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capybara'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
 end
 
 group :development do
